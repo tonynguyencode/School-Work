@@ -1,0 +1,4 @@
+H (72)      Frequency: 6
+e (101)      Frequency: 6
+l (108)      Frequency: 12
+o (111)      Frequency: 6
