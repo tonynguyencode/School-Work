@@ -8,6 +8,7 @@ using ASCIIobject;
 //Requires a reference to the ASCIIobject
 using System.Diagnostics;
 using System.Security.Cryptography;
+using System.Runtime.CompilerServices;
 
 namespace characterCounter_Array
 {
@@ -16,7 +17,7 @@ namespace characterCounter_Array
 
         public static Process proc1 = new Process();
 
-        const int OBJECT_ARRAY_SIZE = 0;
+        
         public static ASObject add_object;
         public static ASObject[] character_Objects;
 
@@ -42,8 +43,14 @@ namespace characterCounter_Array
             
             Console.WriteLine($"Enter your input full path: ");  //Getting the appropriate path
             string read_file = Console.ReadLine();
-            string fileName = $@"{read_file}";  
-       
+            string fileName = $@"{read_file}";
+
+            //Using BinaryWriter to write the output txt
+            //Getting the path or create a path
+            Console.WriteLine("Enter your output file path: ");
+            string output_file = Console.ReadLine();
+            string file_output_Name = $@"{output_file}";
+
             //Got the path.
             //Using BinaryReader to read the input txt
             try
@@ -82,44 +89,46 @@ namespace characterCounter_Array
                             }
                         }
                     }   
-                } 
-           
-                
-            } catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            //Using BinaryWriter to write the output txt
-            //Getting the path or create a path
-            Console.WriteLine("Enter your output file path: ");
-            string output_file = Console.ReadLine();
-            string file_output_Name = $@"{output_file}";
-
-            try
-            {
-                using (var stream = File.Open(file_output_Name, FileMode.OpenOrCreate))
+                } else
                 {
-                    using (var writer = new StreamWriter(stream))
+                    Console.WriteLine("Invalid File!");
+                }
+
+
+                //Use StreamWriter to format and write it the output
+                try
+                {
+                    using (var stream = File.Open(file_output_Name, FileMode.OpenOrCreate))
                     {
-                        for (int x = 0; x < character_Objects.Length; x++)
+                        using (var writer = new StreamWriter(stream))
                         {
-                            if (character_Objects[x] == null)
+                            for (int x = 0; x < character_Objects.Length; x++)
                             {
-                                break;
-                            }
-                            else
-                            {
-                                writer.WriteLine(character_Objects[x].ToString());
+                                if (character_Objects[x] == null)
+                                {
+                                    break;
+                                }
+                                else
+                                {
+                                    writer.WriteLine(character_Objects[x].ToString());
+                                }
                             }
                         }
                     }
+                    Console.WriteLine("Data succesfully writing to the file!");
                 }
-                Console.WriteLine("Data succesfully writing to the file!");
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+
+
+
             } catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
+
             
         
         }
