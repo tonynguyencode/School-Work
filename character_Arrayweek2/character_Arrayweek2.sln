@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "character_Arrayweek2", "character_Arrayweek2\character_Arrayweek2.csproj", "{C4269A40-D38E-4539-9769-3A779A53AF9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Character_Frequency", "Character_Frequency\Character_Frequency.csproj", "{436124AC-2397-49FD-88CD-8BA66DF7141E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4269A40-D38E-4539-9769-3A779A53AF9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4269A40-D38E-4539-9769-3A779A53AF9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4269A40-D38E-4539-9769-3A779A53AF9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4269A40-D38E-4539-9769-3A779A53AF9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{436124AC-2397-49FD-88CD-8BA66DF7141E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{436124AC-2397-49FD-88CD-8BA66DF7141E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{436124AC-2397-49FD-88CD-8BA66DF7141E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{436124AC-2397-49FD-88CD-8BA66DF7141E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C0E7419-407C-450C-8118-D2F121596271}
+	EndGlobalSection
+EndGlobal
